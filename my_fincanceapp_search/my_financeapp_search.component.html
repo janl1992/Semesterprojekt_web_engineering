@@ -1,0 +1,13 @@
+<div class="form-group">
+  <label for="input_text_id" class="col-lg-4">Aktienname:</label> <input type="text" class="col-lg-8" name="input_text" id="input_text_id" required [(ngModel)]="mystock.str_name">
+  <!--<div class="col-lg-8">-->
+    <!---->
+  <!--</div>-->
+</div>
+<div class="form-group">
+  <div class="col-sm-12">
+    <button type="Submit" id="my_submit" name="submit_button" class="btn btn-default" (click)="find_abbreviation(mystock.str_name)">Search Stock</button>
+  </div>
+</div>
+
+<!--(click)="searchstock(konferenz.twitterhash.hashtag)"-->

@@ -1,0 +1,45 @@
+<!--<div class="form-group">-->
+  <!--<label for="input_text_id" class="col-lg-4">Aktienname:</label> <input type="text" class="col-lg-8" name="input_text" [(ngModel)]="str_stock" id="input_text_id">-->
+  <!--&lt;!&ndash;<div class="col-lg-8">&ndash;&gt;-->
+  <!--&lt;!&ndash;&ndash;&gt;-->
+  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
+<!--<div class="form-group">-->
+  <!--<div class="col-sm-12">-->
+    <!--<button type="Submit" id="my_submit" name="submit_button" class="btn btn-default" (click)="find_abbreviation(str_stock)">Search Stock</button>-->
+  <!--</div>-->
+<!--</div>-->
+
+
+<!--<ng-container name = "stock-entrys" *ngFor="let mystock of mystocks">-->
+  <!--<td *ngIf="mystock.exchDisp === 'Frankfurt'">-->
+  <!--{{mystock.symbol}}-->
+  <!--{{mystock.name}}-->
+  <!--{{mystock.exch}}-->
+  <!--{{mystock.type}}-->
+  <!--{{mystock.exchDisp}}-->
+  <!--{{mystock.typeDisp}} </td>-->
+<!--</ng-container>-->
+
+<div class="form-group">
+  <h1>My Finance search</h1>
+  <input #input_text_id id="input_text_id" (keyup)="find_abbreviation(input_text_id.value)" name="input_text" placeholder="Aktienname z.B. Deutsche Telekom AG"/>
+  <!--<ng-container name = "stock-entrys" *ngFor= "let mystock_stock of mystock_stocks | async" class="search-result" (click) = gotoDetail(mystock_stock)>-->
+    <!--<td *ngIf="mystock_stock.exchDisp === 'Frankfurt'" >-->
+  <div name = "stock-entrys" *ngFor= "let mystock_stock of mystock_stocks | async"
+       (click) = gotoDetail(mystock_stock) class="search-result" >
+      {{mystock_stock.symbol}}
+      {{mystock_stock.name}}
+      {{mystock_stock.exch}}
+      {{mystock_stock.type}}
+      {{mystock_stock.exchDisp}}
+      {{mystock_stock.typeDisp}}
+  </div>
+    <!--</td>-->
+  <!--</ng-container>-->
+  <!--<div class="col-lg-8">-->
+  <!---->
+  <!--</div>-->
+</div>
+
+<!--(click)="searchstock(konferenz.twitterhash.hashtag)"-->

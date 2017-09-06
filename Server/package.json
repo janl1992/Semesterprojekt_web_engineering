@@ -1,0 +1,11 @@
+{
+  "name": "server_observable_package",
+  "version": "1.0.0",
+  "description": "package.json for server handling observable requests",
+  "main": "server_observable.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jan Loeffelsender",
+  "license": "ISC"
+}
